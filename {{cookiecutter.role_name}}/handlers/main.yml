@@ -1,0 +1,7 @@
+---
+# handlers file for {{ cookiecutter.role_name }}
+- name: restart foo
+  win_service:
+    name: spooler
+    state: restarted
+  when: ansible_os_family == 'Windows'
